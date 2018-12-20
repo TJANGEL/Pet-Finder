@@ -1,4 +1,4 @@
-import fetchJsonp from 'fetch-jsonp';
+import fetchJsonp from 'package.json/fetch-jsonp';
 import { isValidZip, showAlert } from './validate';
 
 const petForm = document.querySelector('#pet-form');
@@ -21,7 +21,7 @@ function fetchAnimals(e) {
 
   // Fetch Pets
   fetchJsonp(
-    `http://api.petfinder.com/pet.find?format=json&key=YOURKEYHERE&animal=${animal}&location=${zip}&callback=callback`,
+    `http://api.petfinder.com/pet.find?format=json&key=c10876b1bebc73863ea22da890a23f59&animal=${animal}&location=${zip}&callback=callback`,
     {
       jsonpCallbackFunction: 'callback'
     }
@@ -32,8 +32,8 @@ function fetchAnimals(e) {
 }
 
 // // JSONP Callback
-// function callback(data) {
-//   console.log(data);
+function callback(data) {
+  console.log(data);
 // }
 
 // Show Listings Of Pets
